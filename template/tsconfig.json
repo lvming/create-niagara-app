@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "baseUrl": "./src",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "jsx": "react",
+    "noEmit": true,
+    "noEmitHelpers": true,
+    "noImplicitAny": false,
+    "pretty": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "strict": true,
+    "stripInternal": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
