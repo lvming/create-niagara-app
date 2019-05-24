@@ -22,7 +22,7 @@ if (process.env.NIAGARA_SERVER_URL) {
 
 const entries = path.join(__dirname, "src/index.html");
 
-const bundler = new ParcelBundler(entries);
+const bundler = new ParcelBundler(entries, { autoInstall: false } as any);
 
 app.use(bundler.middleware());
 

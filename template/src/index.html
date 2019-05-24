@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- @noSnoop -->
 <html>
   <head>
     <meta charset="UTF-8" />
@@ -18,9 +19,22 @@
         padding: 0;
       }
     </style>
+    <script>
+      (function() {
+        var view = "|view:web:FileDownloadView";
+        var pathname = decodeURIComponent(location.pathname);
+        if (pathname.indexOf(view) > 0) {
+          pathname = pathname.replace(view, "");
+          pathname = pathname.replace("/ord/file:^", "/file/");
+          location.replace(pathname);
+        }
+      })();
+    </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <include src="loader.html"></include>
+    </div>
     <script src="polyfills.ts"></script>
     <script src="main.tsx"></script>
   </body>
